@@ -1,6 +1,6 @@
 {
-  "name": "fusd-token-dapp",
-  "version": "0.0.0",
+  "name": "frd-wallet",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "vite",
