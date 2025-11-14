@@ -363,26 +363,21 @@ export default function App() {
             )}
 
             {activeTab === "receive" && (
-              <div className="card">
-                <div className="card-title">Receive</div>
-                <div className="muted">Your address</div>
-                <div style={{wordBreak:'break-all',marginTop:8}}>{account || "Not connected"}</div>
-                {account && (
-                  <div style={{marginTop:12}}>
-                    <img
-  alt="qr"
-  src={https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(account)}}
-  style={{borderRadius:8}}
-/>
-                    <div style={{marginTop:8}}>
-                      <button className="btn" onClick={copyAddr}>Copy address</button>
-                      <a className="btn outline" href={`https://sepolia.etherscan.io/address/${account}`} target="_blank" rel="noreferrer" style={{marginLeft:8}}>View on Etherscan</a>
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-
+  <div className="card">
+    <div className="card-title">Receive</div>
+    <div className="muted">Your address</div>
+    <div style={{wordBreak:'break-all',marginTop:8}}>{account || "Not connected"}</div>
+    {account && (
+      <div style={{marginTop:12, display: 'flex', flexDirection: 'column', gap: 8}}>
+        <div style={{padding:10, background: 'rgba(0,0,0,0.03)', borderRadius:8, wordBreak:'break-all'}}>{account}</div>
+        <div>
+          <button className="btn" onClick={copyAddr}>Copy address</button>
+          <a className="btn outline" href={`https://sepolia.etherscan.io/address/${account}`} target="_blank" rel="noreferrer" style={{marginLeft:8}}>View on Etherscan</a>
+        </div>
+      </div>
+    )}
+  </div>
+)}
             {activeTab === "settings" && (
               <div className="card">
                 <div className="card-title">Settings</div>
