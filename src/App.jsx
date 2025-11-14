@@ -1,7 +1,11 @@
 // src/App.jsx
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
-import QRCode from "qrcode.react";
+<img
+  alt="qr"
+  src={https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(account)}}
+  style={{borderRadius:8}}
+/>
 
 /*
   FRD Wallet — Full featured single-file app component.
