@@ -1,11 +1,6 @@
 // src/App.jsx
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
-<img
-  alt="qr"
-  src={https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(account)}}
-  style={{borderRadius:8}}
-/>
 
 /*
   FRD Wallet — Full featured single-file app component.
@@ -374,7 +369,11 @@ export default function App() {
                 <div style={{wordBreak:'break-all',marginTop:8}}>{account || "Not connected"}</div>
                 {account && (
                   <div style={{marginTop:12}}>
-                    <QRCode value={account} size={150} />
+                    <img
+  alt="qr"
+  src={https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(account)}}
+  style={{borderRadius:8}}
+/>
                     <div style={{marginTop:8}}>
                       <button className="btn" onClick={copyAddr}>Copy address</button>
                       <a className="btn outline" href={`https://sepolia.etherscan.io/address/${account}`} target="_blank" rel="noreferrer" style={{marginLeft:8}}>View on Etherscan</a>
